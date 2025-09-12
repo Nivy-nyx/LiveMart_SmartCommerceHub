@@ -9,5 +9,12 @@ public class MainApp {
         c1.displayInfo();
         r1.displayInfo();
         w1.displayInfo();
+
+        // === Product Test ===
+        Product p1 = new Product("P401", "Rice Bag", 550.0, 20, "FreshMart");
+        p1.displayInfo();
+        p1.updateStock(5);   // sell 5 units
+        p1.updateStock(18);  // try to sell more than available
     }
 }
+
