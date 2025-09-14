@@ -25,5 +25,11 @@ public class MainApp {
         order1.placeOrder();
         order1.displayOrder();
         order1.updateStatus("Delivered");
+
+        // === Payment Test ===
+        Payment payment1 = new Payment("PAY701", order1, "Online");
+        payment1.processPayment(true);
+        payment1.displayPayment();
     }
 }
+
