@@ -12,9 +12,18 @@ public class MainApp {
 
         // === Product Test ===
         Product p1 = new Product("P401", "Rice Bag", 550.0, 20, "FreshMart");
+        Product p2 = new Product("P402", "Sugar Pack", 120.0, 50, "FreshMart");
+
         p1.displayInfo();
-        p1.updateStock(5);   // sell 5 units
-        p1.updateStock(18);  // try to sell more than available
+        p2.displayInfo();
+
+        // === Cart Test ===
+        Cart cart1 = new Cart("Cart101", c1);
+        cart1.addProduct(p1);
+        cart1.addProduct(p2);
+        cart1.displayCart();
+
+        cart1.removeProduct(p2);
+        cart1.displayCart();
     }
 }
-
