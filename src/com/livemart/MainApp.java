@@ -14,16 +14,16 @@ public class MainApp {
         Product p1 = new Product("P401", "Rice Bag", 550.0, 20, "FreshMart");
         Product p2 = new Product("P402", "Sugar Pack", 120.0, 50, "FreshMart");
 
-        p1.displayInfo();
-        p2.displayInfo();
-
         // === Cart Test ===
         Cart cart1 = new Cart("Cart101", c1);
         cart1.addProduct(p1);
         cart1.addProduct(p2);
         cart1.displayCart();
 
-        cart1.removeProduct(p2);
-        cart1.displayCart();
+        // === Order Test ===
+        Order order1 = new Order("O501", c1, cart1);
+        order1.placeOrder();
+        order1.displayOrder();
+        order1.updateStatus("Delivered");
     }
 }
